@@ -1,0 +1,38 @@
+input {
+  font-size: 2rem;
+  color: white;
+  background-color: #1d1d1d;
+  border: none;
+  padding: 0 .5rem;
+  outline: none;
+}
+.end_input {
+  display: inline;
+  position: relative;
+}
+
+.end_input::after {
+  content: "🠗 Впиши своё число";
+  position: absolute;
+  text-align: left;
+  width: 300px;
+  left: 0px;
+  top: -1.3rem;
+  color: gray;
+  font-size: 1rem;
+  animation-duration: 2s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: gray;
+  }
+  50% {
+    color: rgba(128, 128, 128, 0);
+  }
+  100% {
+    color: gray;
+  }
+}
